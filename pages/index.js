@@ -1,6 +1,9 @@
 import { Component } from 'react';
 import axios from 'axios'
 
+var HtmlToReactParser = require('html-to-react').Parser;
+var htmlToReactParser = new HtmlToReactParser();
+
 class App extends Component {
   static async getInitialProps({ renderPage }) {
     let API_ENDPOINT = 'http://localhost:3000/api';
@@ -327,13 +330,13 @@ class App extends Component {
                                   </div>
                                   <div className="info">
                                     <div className="title">
-                                      job.title
+                                      {job.title}
                                     </div>
                                     <div className="desc"> Job Code : {job.code}</div>
                                     <div className="desc text-uppercase"><strong> {job.desc.uppercase} </strong></div>
                                     <div className="desc showmore">
                                       <strong>Sr. Office Assistant (in Sells)</strong>
-                                      <br />{job.desc.showmore}
+                                      <br />{htmlToReactParser.parse(job.desc.showmore)}
                                     </div>
                                   </div>
                                 </div>
