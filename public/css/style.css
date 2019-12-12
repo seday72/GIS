@@ -2434,7 +2434,7 @@ color: #ff8201;
 }
 
 /* Layouts */
-#__next > .page-body-wrapper {
+.default-layout-navbar + .page-body-wrapper {
       padding-top: 60px;
 }
 
