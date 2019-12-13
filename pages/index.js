@@ -6,7 +6,7 @@ var htmlToReactParser = new HtmlToReactParser();
 
 class App extends Component {
   static async getInitialProps({ renderPage }) {
-    let API_ENDPOINT = 'http://localhost:3000/api';
+    let API_ENDPOINT = process.env.API_ENDPOINT;
     let hero = await axios.get(API_ENDPOINT + '/homepage/hero');
     console.log("Hero Data", hero.data);
     let quickLink = await axios.get(API_ENDPOINT + '/homepage/quicklink');
@@ -59,20 +59,6 @@ class App extends Component {
               <div className="sidebar-bg-options">
                 <a href="index.html">Default Menu</a></div>
             </div>
-            {/*----- <p class="settings-heading">SIDEBAR LAYOUT DESIGNS</p>
-        <div class="page-layout">
-        <div class="sidebar-bg-options">
-
-        <a href="pages/layout/compact-menu.html">Compact menu</a></div>
-        <div class="sidebar-bg-options">
-
-        <a href="pages/layout/sidebar-collapsed.html">Icon menu</a></div>
-        <div class="sidebar-bg-options">
-
-        <a href="pages/layout/sidebar-fixed.html">Sidebar Fixed</a></div>
-        <div class="sidebar-bg-options">
-
-        <a href="pages/layout/sidebar-hidden.html">Sidebar Hidden</a></div></div>--*/}
           </div>
         </div>
         <div id="right-sidebar" className="settings-panel"> <i className="settings-close fa fa-times" />
