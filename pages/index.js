@@ -77,7 +77,7 @@ class App extends Component {
         </div>
         <div id="right-sidebar" className="settings-panel"> <i className="settings-close fa fa-times" />
           <ul className="nav nav-tabs" id="setting-panel" role="tablist">
-            <li className="nav-item"> <a className="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a> </li>
+            <li className="nav-item"> <a className="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded={true}>TO DO LIST</a> </li>
             <li className="nav-item"> <a className="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a> </li>
           </ul>
           <div className="tab-content" id="setting-content">
@@ -483,11 +483,11 @@ class App extends Component {
                                 </div>)})}
                         </div>
                         <a className="carousel-control-prev" href="#carousel2_indicator" role="button" data-slide="prev">
-                          <span className="carousel-control-prev-icon" aria-hidden="true" />
+                          <span className="carousel-control-prev-icon" aria-hidden={true} />
                           <span className="sr-only">Previous</span>
                         </a>
                         <a className="carousel-control-next" href="#carousel2_indicator" role="button" data-slide="next">
-                          <span className="carousel-control-next-icon" aria-hidden="true" />
+                          <span className="carousel-control-next-icon" aria-hidden={true} />
                           <span className="sr-only">Next</span>
                         </a>
                       </div>
